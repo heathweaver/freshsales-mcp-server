@@ -28,6 +28,11 @@ COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/package.json .
 COPY --from=builder /app/package-lock.json .
 
+# Copy cloudflared config and credentials
+COPY config.yml /etc/cloudflared/config.yml
+COPY .cloudflare/fc8bde66-8fb2-40ad-92bb-da5a644f9e1a.json /root/.cloudflared/fc8bde66-8fb2-40ad-92bb-da5a644f9e1a.json
+COPY .cloudflare/cert.pem /root/.cloudflared/cert.pem
+
 # Create persistent data directory for OAuth state
 RUN mkdir -p /app/data
 

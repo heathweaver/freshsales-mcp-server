@@ -6,7 +6,7 @@ services:
       - "8768:8768"
     environment:
       - FRESHSALES_API_KEY=${FRESHSALES_API_KEY}
-      - FRESHSALES_SUBDOMAIN=${FRESHSALES_SUBDOMAIN}
+      - FRESHSALES_ALIAS=${FRESHSALES_ALIAS}
       - MCP_ALLOWED_TOKENS=${MCP_ALLOWED_TOKENS}
     volumes:
       - cloudflared-certs:/root/.cloudflared

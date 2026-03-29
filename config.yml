@@ -1,0 +1,12 @@
+tunnel: fc8bde66-8fb2-40ad-92bb-da5a644f9e1a
+credentials-file: /root/.cloudflared/fc8bde66-8fb2-40ad-92bb-da5a644f9e1a.json
+origincert: /root/.cloudflared/cert.pem
+
+ingress:
+  - hostname: freshsales.ssc.one
+    service: http://localhost:8768
+    originRequest:
+      noTLSVerify: true
+      connectTimeout: 30s
+      noHappyEyeballs: true
+  - service: http_status:404

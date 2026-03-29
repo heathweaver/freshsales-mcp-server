@@ -483,9 +483,9 @@ class FreshsalesMCPServer {
       process.exit(1);
     }
 
-    const subdomain = process.env.FRESHSALES_SUBDOMAIN || process.env.FRESHSALES_BUNDLE_ALIAS;
+    const subdomain = process.env.FRESHSALES_ALIAS || process.env.FRESHSALES_SUBDOMAIN || process.env.FRESHSALES_BUNDLE_ALIAS;
     if (!subdomain) {
-      console.error('Error: FRESHSALES_SUBDOMAIN environment variable is required');
+      console.error('Error: FRESHSALES_ALIAS environment variable is required');
       process.exit(1);
     }
 
