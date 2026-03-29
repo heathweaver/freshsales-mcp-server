@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/heathweaver/Development/Remote Executive/prospect-research -type f \\\\\\(-name *.js -o -name *.ts -o -name *.jsx -o -name *.tsx -o -name *.json \\\\\\) ! -path */node_modules/*)",
+      "Bash(gh repo:*)",
+      "Bash(find /Users/heathweaver/Development/Remote Executive/prospect-research -maxdepth 3 -type f \\\\\\(-name *.js -o -name *.ts -o -name *.py \\\\\\) ! -path */node_modules/* ! -path */.venv/* ! -path */.git/*)",
+      "Bash(gh api:*)",
+      "Bash(find /Users/heathweaver/Development/Remote Executive/prospect-research-extension -maxdepth 3 -type f \\\\\\(-name *.js -o -name *.ts -o -name *.py \\\\\\) ! -path */node_modules/* ! -path */.venv/* ! -path */.git/*)",
+      "Bash(git init:*)",
+      "Bash(git remote:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(docker context:*)",
+      "Bash(/Users/heathweaver/Development/freshsales-mcp-server/.env:*)",
+      "Bash(docker compose:*)",
+      "Bash(docker exec:*)",
+      "Bash(docker cp:*)",
+      "Bash(curl -s https://freshsales.ssc.one/health)",
+      "Bash(node --test tests/tools/integration.test.js)"
+    ]
+  }
+}
